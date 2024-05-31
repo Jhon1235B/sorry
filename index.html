@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me perdonas?</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffebf0;
+            color: #ff69b4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            margin: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #si {
+            background-color: #ff69b4;
+            color: white;
+        }
+        #no {
+            background-color: #ffb6c1;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Me perdonas?</h1>
+    <button id="si">Sí</button>
+    <button id="no">No</button>
+
+    <script>
+        const noButton = document.getElementById('no');
+
+        noButton.addEventListener('mouseover', () => {
+            const maxX = window.innerWidth - noButton.offsetWidth;
+            const maxY = window.innerHeight - noButton.offsetHeight;
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        document.getElementById('si').addEventListener('click', () => {
+            alert('¡Gracias por perdonarme!');
+        });
+
+        document.getElementById('no').addEventListener('click', () => {
+            alert('Oh, bueno...');
+        });
+    </script>
+</body>
+</html>
