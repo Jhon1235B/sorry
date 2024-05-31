@@ -7,8 +7,7 @@
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #ffebf0;
-            color: #ff69b4;
+            background: linear-gradient(to bottom right, #ffebf0, #ffe4e9);
             text-align: center;
             margin: 0;
             padding: 0;
@@ -22,14 +21,22 @@
         h1 {
             margin-bottom: 40px;
             font-size: 2em;
+            color: #ff69b4;
+            text-shadow: 2px 2px #ffb6c1;
         }
         button {
             padding: 15px 25px;
             font-size: 18px;
             margin: 15px;
             border: none;
-            border-radius: 10px;
+            border-radius: 20px;
             cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
         }
         #si {
             background-color: #ff69b4;
